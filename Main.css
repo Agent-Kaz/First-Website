@@ -88,43 +88,33 @@ body {
 
 .wrapper {
     overflow: hidden; /* Hide the extra text */
-    height: 27px; /* Adjust this height based on your text size */
-    width: 200px; /* Set the width matching your text container */
+    height: 30px; /* Adjust this height based on your text size */
+    width: 100%; /* Adjust to your container's width */
     position: absolute; /* or relative, depending on your layout */
-    left: 17%; /* Move the wrapper to the left */
-    top: 36.5%;
+    left: 0; /* Move the wrapper to the left edge */
+    top: 50%; /* Adjust as needed */
 }
 
 .words {
-    display: block;
-    height: 100%;
-    animation: scroll_words 15s infinite;
+    display: flex; /* Use flexbox to align items horizontally */
+    animation: scroll_words 15s linear infinite; /* Use linear for a constant speed */
 }
 
 .words span {
-    display: block;
-    text-align: center;
+    display: inline-block; /* Allows horizontal stacking */
     color: rgb(0, 0, 0);
     font-size: 20px;
-    line-height: 27px; /* Ensure the line height matches the wrapper height */
+    line-height: 30px; /* Ensure the line height matches the wrapper height */
     font-family: 'impact'; /* Change this to your desired font */
+    padding-right: 50px; /* Adds space between words */
 }
 
 @keyframes scroll_words {
     0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-100%);
-    }
-    50% {
-        transform: translateY(-200%);
-    }
-    75% {
-        transform: translateY(-300%);
+        transform: translateX(100%); /* Start off-screen to the right */
     }
     100% {
-        transform: translateY(0); /* Reset to the first word */
+        transform: translateX(-100%); /* End off-screen to the left */
     }
 }
 .image {
