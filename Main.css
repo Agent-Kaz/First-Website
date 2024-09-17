@@ -84,10 +84,6 @@ body {
     margin: 0 20px; /* Adds spacing between icons */
     cursor: pointer; /* Optional: adds a pointer cursor when hovered */
 }
-*
-*:before,
-*:after{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .wrapper {
     overflow: hidden; /* Hide the extra text */
