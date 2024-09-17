@@ -40,7 +40,7 @@ h1{
 }
 
 audio {
-    display: none;
+    /* display: none; Remove or comment out this line temporarily */
 }
 
 * {
