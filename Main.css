@@ -1,7 +1,15 @@
 html {
     font-size: 22px;
 }
-
+/* Mobile styles */
+@media only screen and (max-width: 375px) {
+    /* Adjust the box for smaller screens */
+    .box {
+        width: 50px;  /* Smaller width */
+        height: 50px; /* Smaller height */
+        transform: translate(-40%, -20%);
+    }
+    }
 h5 {
     color: white;
     font-size: 50px;
