@@ -16,7 +16,7 @@
     <!-- Fullscreen overlay -->
     <div id="overlay">
         <div id="overlay-text">
-            <h2>[C l i c k]</h2>
+            <h5>Wellcome</h5>
         </div>
     </div>
 
@@ -64,6 +64,15 @@
     </audio>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textElement = document.querySelector('#overlay-text h5');
+            
+            // Add class to hide caret after typing animation
+            setTimeout(() => {
+                textElement.classList.add('typing-done');
+            }, 4000); // Match this timeout with the duration of the typing animation (4s)
+        });
+
         document.getElementById('overlay').addEventListener('click', function() {
             // Start the audio
             document.getElementById('background-audio').play();
